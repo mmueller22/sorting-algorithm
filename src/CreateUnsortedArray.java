@@ -1,3 +1,7 @@
+// Created by Maximilian Müller on 02/13/2022
+// Copyright @ 2022 Maximilian Müller. All rights reserved.
+// You may use this code for educational or non-comercial purposes only.
+
 import java.util.Random;
 
 public class CreateUnsortedArray {
