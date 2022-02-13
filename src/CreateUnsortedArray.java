@@ -1,11 +1,10 @@
 import java.util.Random;
 
-public class Main{
+public class CreateUnsortedArray {
 
-    int[] unsortedArray;
-    int[] sortedArray;
+    private int[] unsortedArray;
 
-    public Main(int arraySize) {
+    public CreateUnsortedArray (int arraySize) {
         createUnsortedArray(arraySize);
     }
 
@@ -18,20 +17,21 @@ public class Main{
         }
     }
 
-    private void printUnsortedArray() {
+    public void printUnsortedArray(int[] unsortedArray) {
         System.out.println("Before:");
         for (int i = 0; i < unsortedArray.length; i++) {
             System.out.println(unsortedArray[i]);
         }
     }
 
-    private void printSortedArray() {
+    public void printSortedArray(int[] sortedArray) {
         System.out.println("After:");
         for (int i = 0; i < sortedArray.length; i++) {
             System.out.println(sortedArray[i]);
         }
     }
-    public static void main(String[] args) {
-        
+
+    public int[] getUnsortedArray() {
+        return unsortedArray;
     }
 }
