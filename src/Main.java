@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Main{
 
     int[] unsortedArray;
@@ -8,7 +10,12 @@ public class Main{
     }
 
     private void createUnsortedArray(int length) {
+        Random rand = new Random();
         unsortedArray = new int[length];
+
+        for (int i = 0; i <unsortedArray.length; i++) {
+            unsortedArray[i] = rand.nextInt(1000000);
+        }
     }
 
     private void printUnsortedArray() {
