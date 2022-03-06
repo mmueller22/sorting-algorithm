@@ -1,3 +1,5 @@
+import java.time.temporal.Temporal;
+
 // Created by Maximilian Müller on 03/06/2022
 // Copyright @ 2022 Maximilian Müller. All rights reserved.
 // You may use this code for educational or non-comercial purposes only.
@@ -11,19 +13,16 @@ public class InsertionSort {
     }
 
     private int[] insertionSort(int[] array) {
-        for (int i = 0; i < array.length; i++) {
-            int smallest = array[i];
-            int tempIdx = i;
-            for (int j = i; j < array.length; j++) {
-                if (array[j] < smallest) {
-                    smallest = array[j];
-                    tempIdx = j;
-                }
-            }
-            int temp = array[i];
-            array[i] = smallest;
-            array[tempIdx] = temp;
+        int key, j;
+        for (int i = 1; i < array.length; i++) {
+            key = array[i];
+            j = i - 1;
 
+            while (j >= 0 && array[j] > key) {
+                array[j + 1] = array[j];
+                j = j - 1;
+            }
+            array[j + 1] = key;
         }
         return array;
     }
@@ -33,7 +32,7 @@ public class InsertionSort {
     }
 
     public static void main(String[] args) {
-        CreateUnsortedArray array = new CreateUnsortedArray(100);
+        CreateUnsortedArray array = new CreateUnsortedArray(10);
         array.printUnsortedArray(array.getUnsortedArray());
         InsertionSort sort = new InsertionSort(array.getUnsortedArray());
         array.printSortedArray(sort.getSortedArray());
