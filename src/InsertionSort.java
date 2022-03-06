@@ -1,5 +1,3 @@
-import java.time.temporal.Temporal;
-
 // Created by Maximilian Müller on 03/06/2022
 // Copyright @ 2022 Maximilian Müller. All rights reserved.
 // You may use this code for educational or non-comercial purposes only.
